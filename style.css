@@ -1,0 +1,257 @@
+body{
+    margin: 0 auto;
+    height: 100vh;
+    font-family: 'Edu SA Beginner', cursive;
+    color: white;
+    background-color: black;
+}
+
+.homeBody{
+    background-image: url("home_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+
+/* @media (max-width: 895px){
+    body{
+        background-attachment: local;
+    }
+} */
+
+@media(max-width: 1320px){
+    .homeBody{
+        background-size: 1320px auto;
+        background-position: top center;
+    }
+}
+
+/* @media(max-width:1024px){
+    body{
+        background-size: 1024px auto;
+    }
+} */
+@media(min-width:376px) and (max-width:700px){
+    .homeBody{
+        background-size: 950px auto;
+    }
+}
+
+@media(max-width:375px){
+    .homeBody{
+        background-size: 650px auto;
+    }
+}
+
+header{
+    width: 100%;
+}
+
+.mainNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainNav ul{
+    padding: 0;
+    width: 100% ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.mainNav ul hr{
+    height: 1px;
+}
+
+.mainNavContent{
+    max-width: 70%;
+}
+
+.mainNavContent li{
+    list-style: none;
+    margin: auto;
+    
+}
+
+.mainNavContent li a{
+    padding: 4px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    /* position: relative; */
+    transition-duration: 0.2s;
+}
+
+.mainNavContent li a:hover{
+    color: #fae41e;
+    text-shadow: 4px 4px 2px #ffffff;
+    top: -2px;
+    padding-top: 2px;
+    transition-duration: 0.2s;
+}
+
+.cartLink{
+    margin-left: 100px;
+}
+
+.cartIcon{
+    width: 100%;
+    max-width: 35px;
+    height: auto;
+}
+
+.cartIcon:hover{
+    padding-bottom: 2px;
+    box-shadow: 0px 4px 10px 0.5px #fae41e;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+}
+
+#menuIcon{
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+    fill: white;
+    display:none;
+    cursor: pointer;
+}
+
+.mainNav ul.showTheMenu{
+    left: 0;
+}
+
+.headingDiv .mainHeading{
+    text-align: center;
+}
+
+/* .mainHeading{
+    font-size: 4vw;
+} */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservationNotice{
+    max-width: 70%;
+}
+
+.reservationNotice p{
+    text-align: left;
+    font-size: 24px;
+}
+
+
+
+/*watch video on positioning*/
+.pageFooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerContent{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media(min-width:700px){
+    .mainHeading{
+        font-size: 3em;
+    }
+}
+
+@media(min-width:700px) and (max-width:1024px){
+    .reservationNotice p{
+        font-size: 20px ;
+    }
+}
+
+@media(max-width:700px){
+    .reservationNotice p{
+        font-size: 18px;
+    }
+}
+
+@media(min-width:1160px){
+    .pageFooter{
+        height: 37px;
+    }
+}
+
+
+@media(max-width:1024px){
+    .mainNav{
+        justify-content: space-between;
+        /* background: rgba(0, 0, 0, 0.5); */
+    }
+
+    #menuIcon{
+        margin: 15px 0 0 15px;
+        display: block;
+    }
+
+    .cartLink{
+        margin: 15px 15px 0 0;
+    }
+    .mainNav ul{
+        display: block;
+        position: fixed;
+        max-width: 100%;
+        width: 30%;
+        height: 100vh;
+        top: 55px;
+        left: -100%;
+        background: black;
+        text-align: center;
+        margin:0;
+        transition: all 0.5s;
+        ;
+    }
+
+    .mainNavContent li{
+        margin: 30px 0;
+    }
+
+    .mainNav ul hr{
+        display: none;
+    }
+
+    .pageLink{
+        border-bottom: none !important;
+    }
+
+    .pageFooter{
+        padding-bottom:10px;
+        height: auto;
+    }
+    .footerContent{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerContent p{
+        margin: 3px 0;
+        line-height: 10px;
+        font-size: 12px;
+    }
+}

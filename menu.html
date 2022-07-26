@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Steak and Sip - Steakhouse and Winery Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#menuIcon').click(function(){
+            $('ul').toggleClass('showTheMenu');
+        });
+    });
+    </script>
+</head>
+<body class="reservationsBody">
+    <header>
+        <nav class="mainNav">
+            <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="500px" height="500px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+            <ul class="mainNavContent">
+                <li><a class="pageLink homeLink" href="home.html">HOME</a></li><hr>
+                <li><a class="pageLink menuLink" href="menu.html" style="border-bottom: 2px solid #ffffff">MENU</a></li><hr>
+                <li><a class="pageLink reservationsLink" href="reservations.html">RESERVATIONS</a></li><hr>
+                <li><a class="pageLink eventsLink" href="events.html">EVENTS</a></li><hr>
+                <li><a class="pageLink aboutLink" href="about.html">ABOUT</a></li><hr>
+                <li><a class="pageLink contactLink" href="contact.html">CONTACT</a></li>
+            </ul>
+            <a class="cartLink" href="cart.html"><img src="bag.png" class="cartIcon"></a>
+        </nav>
+    </header>
+    <main>
+    </main>
+    
+</body>
+</html>
