@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
-<body class="reservationsBody">
+<body class="reservationsBody body2">
     <header>
         <nav class="mainNav">
             <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="500px" height="500px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
@@ -31,17 +31,17 @@
 
     <main>
         <div class="headingDiv">
-            <h1 class="mainHeading"> RESERVATIONS</h1>
+            <h1 class="mainHeading">RESERVATIONS</h1>
         </div>
 
-        <div class="reservationNotice">
+        <div class="reservationNotice mainText">
             <p>Tables for walk-ins are not always guaranteed, so reservations are strongly advised against disappointments.<br> We have a 20 minutes grace period, after which you may lose your table if you have not arrived.<br> Please contact us if you will be running late. All reservations are made for a maximum of 2 hours.</p>
         </div>
 
         <form class="reservationSelection">
-            <label>Make a Reservation</label>
+            <legend class="select">Make a Reservation</legend>
             <input type="date" class="select" id="date" name="date">
-            <select class="selectTime" id="time" name="time">
+            <select class="select" id="time" name="time">
                 <option value="11:00 A.M.">11:00 A.M.</option>
                 <option value="11:30 A.M.">11:30 A.M.</option>
                 <option value="12:00 P.M.">12:00 P.M.</option>
@@ -64,7 +64,7 @@
                 <option value="08:30 P.M.">08:30 P.M.</option>
                 <option value="09:00 P.M.">09:00 P.M.</option>
             </select>
-            <select class="selectGuests" id="guests" name="guests">
+            <select class="select" id="guests" name="guests">
                 <option value="1 guest">1 guest</option>
                 <option value="2 guests">2 guests</option>
                 <option value="3 guests">3 guests</option>
@@ -78,9 +78,10 @@
                 <option value="11 guests">11 guests</option>
                 <option value="12 guests">12 guests</option>
             </select>
+            <button class="select">Check Availability</button>
         </form>
 
-        <div class="reservationNotice">
+        <div class="reservationNotice mainText">
             <p>Contact us if you would like to make a reservation larger than a party of 12.</p>
         </div>
     </main>
