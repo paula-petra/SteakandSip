@@ -10,15 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('#menuIcon').click(function(){
-            $('ul').toggleClass('showTheMenu');
-        });
-    });
-    </script>
 </head>
-<body class="reservationsBody">
+<body class="contactPage">
     <header>
         <nav class="mainNav">
             <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="500px" height="500px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
@@ -34,6 +27,39 @@
         </nav>
     </header>
     <main>
+        <section class="headingDiv">
+            <h1 class="mainHeading">WE CAN'T WAIT TO HAVE YOU!</h1>
+        </section>
+            
+        <section class="contactPageContent">
+            <div class="contactpageImage">
+                <img src="contactpage.jpg">
+            </div class="contactForm">
+                <form>
+                    <h3>LEAVE US A MESSAGE</h3>
+                    <input type="text" class="formBox" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" class="formBox" id="email" name="email" placeholder="Your e-mail" required>
+                    <input type="text" class="formBox" id="suject" name="subject" placeholder="Subject">
+                    <input type="text" class="formBox" id="message" name="message" placeholder="Message" required>
+                    <button>Send Message</button>
+                </form>
+            <div class="contactDetails">
+                <h3>OUR ADDRESS</h3>
+                <address>
+                    Black Building,<br> Avenue I
+                    7890,<br> Nicosia
+                </address>
+                <p>e-mal us: <a href="mailto:info@steakandsip.com">info@steakandsip.com</a><br>Tel: <a href="tel:+90542123456">+90542123456</a></p>
+            </div>
+        </section>
     </main>
+    <footer class="pageFooter">
+        <div class="footerContent">
+            <p>&copy;2022, STEAK AND SIP</p>
+            <p>DINE-IN / TAKEOUT / DELIVERY</p>
+            <P>0 (542) 123-456 . 7890 AVENUE I NICOSIA</P>
+        </div>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>
