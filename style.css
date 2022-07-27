@@ -26,17 +26,9 @@ body{
     background-repeat: no-repeat;
 }
 
-/* .body2::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-image: url("home_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.25;
+/* .body2 main{
+    position: relative;
+    z-index: 1;
 } */
 
 /* @media (max-width: 895px){
@@ -57,7 +49,7 @@ body{
         background-size: 1024px auto;
     }
 } */
-@media(min-width:376px) and (max-width:700px){
+@media(min-width:320px) and (max-width:700px){
     .homeBody, .body2{
         background-size: 950px auto;
     }
@@ -226,9 +218,16 @@ main{
     margin: 15px 0;
 }
 
+.aboutText h2{
+    display: inline-block;
+    border:  2px solid #a83632;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 /*watch video on positioning*/
 .pageFooter{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -238,6 +237,10 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.homeBody .pageFooter, .reservationsBody .pageFooter{
+    position: fixed;
 }
 
 .footerContent{
@@ -262,6 +265,10 @@ main{
 @media(max-width:700px){
     .mainText p{
         font-size: 18px;
+    }
+    
+    .body2{
+        background-repeat: repeat-y;
     }
 }
 
