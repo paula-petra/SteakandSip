@@ -226,6 +226,10 @@ main{
     padding: 5px;
 }
 
+.contactPage main section{
+    width: 100%;
+}
+
 .contactPageContent{
     display: flex;
     flex-direction: row;
@@ -233,8 +237,54 @@ main{
     align-items: top;
 }
 
+.contactPageImage img{
+    width: 100%;
+}
+
 .contactPageContent div{
     width: calc(100%/3);
+    text-align: center;
+}
+
+.contactForm form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactForm form div{
+    width: 100%;
+    margin: 5px 0;
+}
+
+.contactForm form #div1{
+    margin-bottom: 0;
+}
+
+.contactForm #name, .contactForm #email{
+    width: 42%;
+}
+
+.contactForm #subject, .contactForm #message{
+    width: calc(85% + 8px);
+    margin: 5px 0;
+}
+
+.contactForm #message{
+    height: 100px;
+}
+
+.contactForm button{
+    width: 30%;
+    margin: 5px 0;
+}
+
+.formBox{
+    height: 35px;
+}
+
+.contactDetails{
+    font-size: 20px;
 }
 
 /*watch video on positioning*/
@@ -331,6 +381,17 @@ main{
 
     .pageLink{
         border-bottom: none !important;
+    }
+
+    .contactPageContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactPageContent div{
+        width: 70%;
     }
 
     .pageFooter{
