@@ -13,7 +13,7 @@ body{
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    /* justify-content: top; */
     align-items: center;
 }
 
@@ -146,15 +146,22 @@ header{
     text-align: center;
 }
 
-/* .mainHeading{
-    font-size: 4vw;
-} */
-
 main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeText{
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .body2 .mainNav{
@@ -228,6 +235,7 @@ main{
 
 .contactPage main section{
     width: 100%;
+    margin: 25px 0;
 }
 
 .contactPageContent{
@@ -277,14 +285,32 @@ main{
 .contactForm button{
     width: 30%;
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .formBox{
     height: 35px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#sendButton:hover{
+    color: #fae41e;
+    border: 2px solid #fae41e;
+    transition: 0.5s;
 }
 
 .contactDetails{
     font-size: 20px;
+}
+
+.contactDetails p a{
+    color: #fae41e;
+}
+
+.contactDetails p a:visited{
+    color: #a83632;
 }
 
 /*watch video on positioning*/
@@ -317,6 +343,10 @@ main{
     .mainHeading{
         font-size: 3em;
     }
+
+    .contactPageContent .subHeading{
+        font-size: 30px;
+    }
 }
 
 @media(min-width:700px) and (max-width:1024px){
@@ -333,14 +363,15 @@ main{
     .body2{
         background-repeat: repeat-y;
     }
-}
 
-/* @media(min-width:1160px){
-    .mainText{
-        height: 37px;
+    .contactPageContent .subHeading{
+        font-size: 18px;
     }
-} */
 
+    .contactDetails{
+        font-size: 15px;
+    }
+}
 
 @media(max-width:1024px){
     .mainNav, .body2 .mainNav{
@@ -392,6 +423,11 @@ main{
 
     .contactPageContent div{
         width: 70%;
+        margin: 20px 0;
+    }
+
+    .contactPage main{
+        margin-bottom: 150px;
     }
 
     .pageFooter{
