@@ -4,61 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Steak and Sip - Steakhouse and Winery Restaurant</title>
+    <title>Steak and Sip - Steakhouse and Winery Restaurant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
-<body class="contactPage">
+
+<body class="homeBody">
     <header>
         <nav class="mainNav">
             <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="500px" height="500px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
             <ul class="mainNavContent">
-                <li><a class="pageLink homeLink" href="index.html">HOME</a></li><hr>
+                <li><a class="pageLink homeLink" href="index.html" style="border-bottom: 2px solid #ffffff;">HOME</a></li><hr>
                 <li><a class="pageLink menuLink" href="menu.html">MENU</a></li><hr>
                 <li><a class="pageLink reservationsLink" href="reservations.html">RESERVATIONS</a></li><hr>
                 <li><a class="pageLink galleryLink" href="gallery.html">GALLERY</a></li><hr>
                 <li><a class="pageLink aboutLink" href="about.html">ABOUT</a></li><hr>
-                <li><a class="pageLink contactLink" href="contact.html" style="border-bottom: 2px solid #ffffff">CONTACT</a></li>
+                <li><a class="pageLink contactLink" href="contact.html">CONTACT</a></li>
             </ul>
             <a class="cartLink" href="cart.html"><img src="bag.png" class="cartIcon"></a>
         </nav>
     </header>
+
     <main>
-        <section class="headingDiv">
-            <h1 class="mainHeading">WE CAN'T WAIT TO SERVE YOU!</h1>
+        <section class="homeSection" id="section1">
+            <div class="headingDiv">
+                <h1 class="mainHeading"> STEAK AND SIP</h1>
+            </div>
+            <div class="mainText">
+                <p id="homeText">
+                    A dining renowned for birthdays, catching up with friends, lunch on our patio in our winter garden, fine winery including vintage wine, craft beer, cocktails and delicious Steak.
+                </p>
+            </div>
         </section>
-            
-        <section class="contactPageContent">
-            <div class="contactPageImage">
-                <img src="contactpage.jpg">
+
+        <section class="visitPages" id="section2">
+            <div class="pageLinks" id="menu">
+                <img src="menuPageLinkImg.jpg">
             </div>
-            <div class="contactForm">
-                <form>
-                    <h2 class="subHeading">LEAVE US A MESSAGE</h2>
-                    <div id="div1">
-                        <input type="text" class="formBox" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" class="formBox" id="email" name="email" placeholder="Your e-mail" required>
-                    </div>
-                    <div id="div2">
-                        <input type="text" class="formBox" id="subject" name="subject" placeholder="Subject">
-                        <input type="text" class="formBox" id="message" name="message" placeholder="Message" required>
-                    <button class="formBox" id="sendButton">Send Message</button>
-                    </div>
-                </form>
+            <div class="pageLinks" id="reservations">
+                <img src="bell.jpg">
             </div>
-            <div class="contactDetails">
-                <h2 class="subHeading">OUR ADDRESS</h2>
-                <address>
-                    Black Building,<br> Avenue I
-                    7890,<br> Nicosia
-                </address>
-                <p>E-mail us: <a href="mailto:info@steakandsip.com">info@steakandsip.com</a><br>Tel: <a href="tel:+90542123456">+90542123456</a></p>
+            <div class="pageLinks" id="gallery">
+                <img src="sunset-dining.jpg">
             </div>
         </section>
     </main>
+
     <footer class="pageFooter">
         <div class="footerContent">
             <p>&copy;2022, STEAK AND SIP</p>
