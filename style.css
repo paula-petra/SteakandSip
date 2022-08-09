@@ -231,12 +231,36 @@ main section{
 .linkImgOverlay > * {
     transform: translateY(80px);
     transition: transform(0.25s);
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .linkImgOverlay:hover > * {
     transform: translateY(0);
     
+}
+
+#section3{
+    background-color: black;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 75px;
+}
+
+#section3 #form{
+    display: flex;
+    flex-direction: row;
+}
+
+#section3 .subHeading{
+    padding: 10px 0;
+}
+
+.newsletterContact{
+    margin: 0 5px;
 }
 
 .body2 .mainNav{
@@ -360,7 +384,6 @@ main section{
 .contactForm button{
     width: 30%;
     margin: 5px 0;
-    cursor: pointer;
 }
 
 .formBox{
@@ -370,13 +393,14 @@ main section{
     border: 2px solid white;
 }
 
-#sendButton{
-    transition: 0.5s;
+.sendButton{
+    transition: 0.25s;
 }
 
-#sendButton:hover{
+.sendButton:hover{
     color: #fae41e;
     border: 2px solid #fae41e;
+    cursor: pointer;
 }
 
 .contactDetails{
@@ -406,9 +430,9 @@ main section{
     justify-content: center;
 }
 
-.homeBody .pageFooter{
+/* .homeBody .pageFooter{
     display: none;
-}
+} */
 
 .footerContent{
     width: 75%;
@@ -422,7 +446,7 @@ main section{
         font-size: 3em;
     }
 
-    .contactPageContent .subHeading{
+    .subHeading{
         font-size: 30px;
     }
 }
@@ -433,7 +457,59 @@ main section{
     }
 }
 
+@media(max-width:410px){
+    #section1{
+        margin: 0;
+        height: 328px;
+    }
+
+    #section1 .headingDiv, #section1 .headingDiv h1{
+        margin: 0;
+    }
+
+    #section2{
+        margin-top: 0;
+    }
+}
+
+@media(min-width:410px) and (max-width:700px){
+    #section2{
+        margin-top: 165px;
+    }
+}
+
 @media(max-width:700px){
+    #section1{
+        margin: 0px;
+    }
+
+    #section2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section2 .pageLinks{
+        width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+
+    .linkImgTitle{
+        font-size: 1.25em;
+    }
+
+    #section3 #form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form button{
+        width: 30%;
+        margin-top: 10px;
+    }
+
     .mainText p{
         font-size: 18px;
     }
@@ -442,7 +518,7 @@ main section{
         background-repeat: repeat-y;
     }
 
-    .contactPageContent .subHeading{
+    .subHeading{
         font-size: 18px;
     }
 
@@ -477,7 +553,6 @@ main section{
         text-align: center;
         margin:0;
         transition: all 0.5s;
-        ;
     }
 
     .mainNavContent li{
@@ -499,23 +574,6 @@ main section{
     main section{
         width: 100%;
     }
-
-    /* #section2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 100%;
-        position: relative;
-    } */
-
-    /* #section2 .pageLinks{
-        /* position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0; */
-     */
 
     .contactPageContent{
         display: flex;
