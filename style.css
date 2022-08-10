@@ -8,9 +8,6 @@ body{
 }
 
 .homeBody{
-    background-image: url("home_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     /* justify-content: top; */
@@ -21,42 +18,26 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    background-image: url("bg2.jpg");
+    background-image: url("imgs/bg2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* .body2 main{
-    position: relative;
-    z-index: 1;
-} */
-
-/* @media (max-width: 895px){
-    body{
-        background-attachment: local;
-    }
-} */
-
 @media(max-width: 1320px){
-    .homeBody, .body2{
+    #section1, .body2{
         background-size: 1320px auto;
         background-position: top center;
     }
 }
 
-/* @media(max-width:1024px){
-    body{
-        background-size: 1024px auto;
-    }
-} */
 @media(min-width:320px) and (max-width:700px){
-    .homeBody, .body2{
+    #section1, .body2{
         background-size: 950px auto;
     }
 }
 
 @media(max-width:375px){
-    .homeBody, .body2{
+    #section1, .body2{
         background-size: 650px auto;
     }
 }
@@ -154,15 +135,18 @@ main{
 }
 
 main section{
-    width: 85%;
+    width: 100%;
 }
 
 #section1{
+    height: 90vh;
+    background-image: url("imgs/home_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    margin:0;
 }
 
 #section1 div{
@@ -178,13 +162,13 @@ main section{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 200px 0 0;
+    margin: 0;
 }
 
 #section2 .pageLinks{
-    width: 350px;
-    height: 300px;
-    margin: 5px;
+    width: calc(100%/3);
+    height: 430px;
+    margin: 0;
     position: relative;
 }
 
@@ -278,6 +262,7 @@ main section{
 }
 
 .body2 main{
+    height: 100vh;
     margin: 50px 0;
 }
 
@@ -421,6 +406,7 @@ main section{
     left: 0;
     bottom: 0;
     margin-top: 30px;
+    padding: 10px 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -429,10 +415,6 @@ main section{
     flex-direction: row;
     justify-content: center;
 }
-
-/* .homeBody .pageFooter{
-    display: none;
-} */
 
 .footerContent{
     width: 75%;
@@ -455,12 +437,16 @@ main section{
     .mainText p{
         font-size: 20px ;
     }
+
+    #section2 .pageLinks{
+        height: 350px;
+    }
 }
 
 @media(max-width:410px){
     #section1{
         margin: 0;
-        height: 328px;
+        height: 85vh;
     }
 
     #section1 .headingDiv, #section1 .headingDiv h1{
@@ -470,11 +456,19 @@ main section{
     #section2{
         margin-top: 0;
     }
+
+    #section2 .pageLinks{
+        height: 300px;
+    }
+
+    #section3 div{
+        text-align: center;
+    }
 }
 
 @media(min-width:410px) and (max-width:700px){
-    #section2{
-        margin-top: 165px;
+    #section2 .pageLinks{
+        height: 400px;
     }
 }
 
@@ -490,7 +484,7 @@ main section{
 
     #section2 .pageLinks{
         width: 100%;
-        height: 400px;
+        /* height: 400px; */
         margin: 0;
     }
 
@@ -592,7 +586,6 @@ main section{
     }
 
     .pageFooter{
-        padding-bottom:10px;
         height: auto;
     }
     .footerContent{
