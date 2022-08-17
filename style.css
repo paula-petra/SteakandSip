@@ -477,9 +477,44 @@ main section{
 
 .menuContainer{
     width: 50%;
-    height: 500px;
+    height: auto;
+    padding: 20px 0;
     margin: 75px 0;
-    background-color: bisque;
+    background-color: rgb(58, 59, 66);
+}
+
+.menuSegments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuSegments h1{
+    margin: 40px 0 15px;
+    font-family: 'Aboreto', cursive;
+    font-size: 3.5em;
+}
+
+.menuList{
+    margin: 30px 0;
+}
+
+.menuList ul h3{
+    font-family: 'Josefin Slab', serif;
+    text-transform: uppercase;
+    font-size: 2.25em;
+}
+
+.menuList ul li{
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.5em;
+    list-style: none;
+    padding: 15px;
+}
+
+.menuList ul li span{
+    font-size: 0.5em;
 }
 
 /*watch video on positioning*/
@@ -547,6 +582,12 @@ main section{
     #section2 .pageLinks{
         height: 350px;
     }
+
+    .imgSection{
+        background-size: 1250px auto;
+        background-position: top center;
+        height: 92.5vh;
+    }
 }
 
 @media(max-width:410px){
@@ -598,7 +639,6 @@ main section{
 
     #section2 .pageLinks{
         width: 100%;
-        /* height: 400px; */
         margin: 0;
     }
 
@@ -641,6 +681,11 @@ main section{
 
     .galleryHeading h1{
         font-size: 1.75em;
+    }
+
+    .imgSection{
+        background-size: 900px;
+        height: 66.5vh;
     }
 }
 
@@ -706,6 +751,11 @@ main section{
 
     .contactPage main{
         margin-bottom: 150px;
+    }
+
+    .menuContainer{
+        width: 100%;
+        margin: 0 0 50px;
     }
 
     .pageFooter{
