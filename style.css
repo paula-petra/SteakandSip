@@ -433,6 +433,7 @@ main section{
     height: auto;
     margin: 0.5rem;
     position: relative;
+    z-index: -1;
 }
 
 .canvas .img img{
