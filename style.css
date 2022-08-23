@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0 auto;
     height: 100vh;
     font-family: 'Edu SA Beginner', cursive;
@@ -7,14 +7,28 @@ body{
     position: relative;
 }
 
-.homeBody{
+.closePopup {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: transparent;
+    background: transparent;
+    border: none;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+.homeBody {
     display: flex;
     flex-direction: column;
     /* justify-content: top; */
     align-items: center;
 }
 
-#reservationsBody{
+#reservationsBody {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -23,7 +37,7 @@ body{
     background-repeat: no-repeat;
 }
 
-#aboutBody{
+#aboutBody {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -36,60 +50,66 @@ body{
     height: 100vh;
 }
 
-@media(max-width: 1320px){
-    #section1, .body2{
+@media(max-width: 1320px) {
+
+    #section1,
+    .body2 {
         background-size: 1320px auto;
         background-position: top center;
     }
 }
 
-@media(min-width:320px) and (max-width:700px){
-    #section1, .body2{
+@media(min-width:320px) and (max-width:700px) {
+
+    #section1,
+    .body2 {
         background-size: 950px auto;
     }
 }
 
-@media(max-width:375px){
-    #section1, .body2{
+@media(max-width:375px) {
+
+    #section1,
+    .body2 {
         background-size: 650px auto;
     }
 }
 
-header{
+header {
     width: 100%;
 }
 
-.mainNav{
+.mainNav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.mainNav ul{
+.mainNav ul {
     padding: 0;
-    width: 100% ;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
 }
 
-.mainNav ul hr{
+.mainNav ul hr {
     height: 1px;
 }
 
-.mainNavContent{
+.mainNavContent {
     max-width: 70%;
 }
 
-.mainNavContent li{
+.mainNavContent li {
     list-style: none;
     margin: auto;
-    
+
 }
 
-.mainNavContent li a{
+.mainNavContent li a {
     padding: 4px;
     text-decoration: none;
     color: white;
@@ -98,60 +118,60 @@ header{
     transition-duration: 0.2s;
 }
 
-.mainNavContent li a:hover{
+.mainNavContent li a:hover {
     color: #fae41e;
     text-shadow: 4px 4px 2px #ffffff;
     top: -2px;
     padding-top: 2px;
 }
 
-.cartLink{
+.cartLink {
     margin-left: 100px;
 }
 
-.cartIcon{
+.cartIcon {
     width: 100%;
     max-width: 35px;
     height: auto;
     transition-duration: 0.2s;
 }
 
-.cartIcon:hover{
+.cartIcon:hover {
     padding-bottom: 2px;
     box-shadow: 0px 4px 10px 0.5px #fae41e;
     border-radius: 50px;
 }
 
-#menuIcon{
+#menuIcon {
     width: 100%;
     max-width: 30px;
     height: auto;
     fill: white;
-    display:none;
+    display: none;
     cursor: pointer;
 }
 
-.mainNav ul.showTheMenu{
+.mainNav ul.showTheMenu {
     left: 0;
 }
 
-.headingDiv .mainHeading{
+.headingDiv .mainHeading {
     text-align: center;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; 
-}
-
-main section{
     width: 100%;
 }
 
-#section1{
+main section {
+    width: 100%;
+}
+
+#section1 {
     height: 90vh;
     background-image: url("imgs/home_bg.jpg");
     background-size: cover;
@@ -159,18 +179,18 @@ main section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0;
+    margin: 0;
 }
 
-#section1 div{
+#section1 div {
     margin: 30px 0;
 }
 
-#homeText{
+#homeText {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-#section2{
+#section2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -178,25 +198,25 @@ main section{
     margin: 0;
 }
 
-#section2 .pageLinks{
+#section2 .pageLinks {
     width: calc(100%/3);
     height: 430px;
     margin: 0;
     position: relative;
 }
 
-.pageLinks a{
+.pageLinks a {
     color: white;
     text-decoration: none;
 }
 
-#section2 .pageLinks img{
+#section2 .pageLinks img {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.linkImgOverlay{
+.linkImgOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -210,33 +230,33 @@ main section{
     transition: 0.25s;
 }
 
-.linkImgOverlay:hover{
+.linkImgOverlay:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 0.25s;
 }
 
-.linkImgTitle{
+.linkImgTitle {
     font-size: 2em;
     font-weight: bold;
 }
 
-.linkImgOverlay hr{
+.linkImgOverlay hr {
     width: 100px;
 }
 
-.linkImgOverlay > * {
+.linkImgOverlay>* {
     transform: translateY(80px);
     transition: transform(0.25s);
     transition-duration: 0.5s;
 }
 
-.linkImgOverlay:hover > * {
+.linkImgOverlay:hover>* {
     transform: translateY(0);
-    
+
 }
 
-#section3{
+#section3 {
     background-color: black;
     width: 100%;
     height: 250px;
@@ -247,20 +267,20 @@ main section{
     margin: 0 0 75px;
 }
 
-#section3 #form{
+#section3 #form {
     display: flex;
     flex-direction: row;
 }
 
-#section3 .subHeading{
+#section3 .subHeading {
     padding: 10px 0;
 }
 
-.newsletterContact{
+.newsletterContact {
     margin: 0 5px;
 }
 
-.body2 .mainNav{
+.body2 .mainNav {
     position: fixed;
     left: 0;
     top: 0;
@@ -274,37 +294,37 @@ main section{
     align-items: center;
 }
 
-.body2 main{
+.body2 main {
     height: 100vh;
     margin: 50px 0;
 }
 
-.mainText{
+.mainText {
     max-width: 70%;
 }
 
-.mainText p{
+.mainText p {
     text-align: center;
     font-size: 24px;
 }
 
-.aboutText p{
+.aboutText p {
     text-align: left;
 }
 
-.container#blur.active{
+.container#blur.active {
     filter: blur(20px);
     pointer-events: none;
     user-select: none;
 }
 
-#reservationsBody main{
+#reservationsBody main {
     height: 100vh;
     position: relative;
     transition: 0.5s;
 }
 
-#reservationsBody main .content{
+#reservationsBody main .content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -312,7 +332,7 @@ main section{
     align-items: center;
 }
 
-.reservationSelection{
+.reservationSelection {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -322,19 +342,19 @@ main section{
     padding: 10px;
 }
 
-.select{
+.select {
     width: 70%;
     height: 30px;
     padding: 0;
     margin: 3px 0;
-    border: 0;   
+    border: 0;
 }
 
-.select:hover{
+.select:hover {
     cursor: pointer;
 }
 
-.reservationSelection #legend{
+.reservationSelection #legend {
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -342,15 +362,15 @@ main section{
     margin: 15px 0 25px;
 }
 
-.reservationSelection button{
+.reservationSelection button {
     margin: 15px 0;
 }
 
-#popup >*{
+#popup>* {
     color: black;
 }
 
-#popup{
+#popup {
     position: fixed;
     top: 40%;
     left: 50%;
@@ -364,136 +384,138 @@ main section{
     transition: 0.5s;
 }
 
-#popup.active{
+#popup.active {
     top: 50%;
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
-    
+
 }
 
-.aboutText h2{
+.aboutText h2 {
     display: inline-block;
-    border:  2px solid #a83632;
+    border: 2px solid #a83632;
     border-radius: 20px;
     padding: 5px;
 }
 
-.contactPage main section{
+.contactPage main section {
     width: 100%;
     margin: 25px 0;
 }
 
-.contactPageContent{
+.contactPageContent {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: top;
 }
 
-.contactPageImage img{
+.contactPageImage img {
     width: 100%;
 }
 
-.contactPageContent div{
+.contactPageContent div {
     width: calc(100%/3);
     text-align: center;
 }
 
-.contactForm form{
+.contactForm form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contactForm form div{
+.contactForm form div {
     width: 100%;
     margin: 5px 0;
 }
 
-.contactForm form #div1{
+.contactForm form #div1 {
     margin-bottom: 0;
 }
 
-.contactForm #name, .contactForm #email{
+.contactForm #name,
+.contactForm #email {
     width: 42%;
 }
 
-.contactForm #subject, .contactForm #message{
+.contactForm #subject,
+.contactForm #message {
     width: calc(85% + 8px);
     margin: 5px 0;
 }
 
-.contactForm #message{
+.contactForm #message {
     height: 100px;
 }
 
-.contactForm button{
+.contactForm button {
     width: 30%;
     margin: 5px 0;
 }
 
-.formBox{
+.formBox {
     height: 35px;
     background-color: transparent;
     color: white;
     border: 2px solid white;
 }
 
-.sendButton{
+.sendButton {
     transition: 0.25s;
 }
 
-.sendButton:hover{
+.sendButton:hover {
     color: #fae41e;
     border: 2px solid #fae41e;
     cursor: pointer;
 }
 
-.contactDetails{
+.contactDetails {
     font-size: 20px;
 }
 
-.contactDetails p a{
+.contactDetails p a {
     color: #fae41e;
 }
 
-.contactDetails p a:visited{
+.contactDetails p a:visited {
     color: #a83632;
 }
 
-.pageContainer{
+.pageContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.galleryWrapper{
+.galleryWrapper {
     width: 85%;
 }
 
-.galleryHeading h1{
+.galleryHeading h1 {
     padding-left: 20px;
 }
 
-.galleryHeading h1 span{
+.galleryHeading h1 span {
     color: #fae41e;
     font-weight: 100;
 }
 
 
-.canvas{
+.canvas {
     margin: 0 0.65rem;
 }
 
-.canvas .img{
+.canvas .img {
     height: auto;
     margin: 0.5rem;
     position: relative;
 }
 
-.canvas .img img{
+.canvas .img img {
     max-width: 100%;
     height: auto;
     width: 100%;
@@ -502,7 +524,7 @@ main section{
     display: block;
 }
 
-.canvasImgOverlay{
+.canvasImgOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -513,12 +535,12 @@ main section{
     transition: opacity 0.25s;
 }
 
-.canvasImgOverlay:hover{
+.canvasImgOverlay:hover {
     cursor: pointer;
     opacity: 1;
 }
 
-.imgSection{
+.imgSection {
     width: 100%;
     height: 100vh;
     background-image: url(imgs/red-wine-and-steak-for-web-istock.png);
@@ -526,14 +548,14 @@ main section{
     background-repeat: no-repeat;
 }
 
-.menuSection{
+.menuSection {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.menuContainer{
+.menuContainer {
     width: 50%;
     height: auto;
     padding: 20px 0;
@@ -541,42 +563,42 @@ main section{
     background-color: rgb(58, 59, 66);
 }
 
-.menuSegments{
+.menuSegments {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menuSegments h1{
+.menuSegments h1 {
     margin: 40px 0 15px;
     font-family: 'Aboreto', cursive;
     font-size: 3.5em;
 }
 
-.menuList{
+.menuList {
     margin: 30px 0;
 }
 
-.menuList ul h3{
+.menuList ul h3 {
     font-family: 'Josefin Slab', serif;
     text-transform: uppercase;
     font-size: 2.25em;
 }
 
-.menuList ul li{
+.menuList ul li {
     font-family: 'Josefin Slab', serif;
     font-size: 1.5em;
     list-style: none;
     padding: 15px;
 }
 
-.menuList ul li span{
+.menuList ul li span {
     font-size: 0.5em;
 }
 
 /*watch video on positioning*/
-.pageFooter{
+.pageFooter {
     position: relative;
     left: 0;
     bottom: 0;
@@ -591,177 +613,182 @@ main section{
     justify-content: center;
 }
 
-.footerContent{
+.footerContent {
     width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-@media(min-width:700px){
-    .mainHeading{
+@media(min-width:700px) {
+    .mainHeading {
         font-size: 3em;
     }
 
-    .subHeading{
+    .subHeading {
         font-size: 30px;
     }
 
-    .canvas{
+    .canvas {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 300px);
         grid-auto-flow: row dense;
     }
 
-    .canvas .img{
+    .canvas .img {
         margin: 0.7rem;
     }
 
-    .canvas .img:first-child{
+    .canvas .img:first-child {
         grid-row: span 1;
     }
 
-    .canvas .img:nth-child(2){
+    .canvas .img:nth-child(2) {
         grid-column: 2 / 3;
         grid-row: span 2;
     }
 
-    .canvas .img:nth-child(6), .canvas .img:nth-child(8){
+    .canvas .img:nth-child(6),
+    .canvas .img:nth-child(8) {
         grid-row: span 2;
     }
 }
 
-@media(min-width:700px) and (max-width:1024px){
-    .mainText p{
-        font-size: 20px ;
+@media(min-width:700px) and (max-width:1024px) {
+    .mainText p {
+        font-size: 20px;
     }
 
-    #section2 .pageLinks{
+    #section2 .pageLinks {
         height: 350px;
     }
 
-    .imgSection{
+    .imgSection {
         background-size: 1250px auto;
         background-position: top center;
         height: 92.5vh;
     }
 }
 
-@media(max-width:410px){
-    #section1{
+@media(max-width:410px) {
+    #section1 {
         margin: 0;
         height: 85vh;
     }
 
-    #section1 .headingDiv, #section1 .headingDiv h1{
+    #section1 .headingDiv,
+    #section1 .headingDiv h1 {
         margin: 0;
     }
 
-    #section2{
+    #section2 {
         margin-top: 0;
     }
 
-    #section2 .pageLinks{
+    #section2 .pageLinks {
         height: 300px;
     }
 
-    #section3 div{
+    #section3 div {
         text-align: center;
     }
 }
 
-@media(min-width:410px) and (max-width:700px){
-    #section2 .pageLinks{
+@media(min-width:410px) and (max-width:700px) {
+    #section2 .pageLinks {
         height: 400px;
     }
 }
 
-@media(max-width:700px){
-    #aboutBody main section{
+@media(max-width:700px) {
+    #aboutBody main section {
         margin-top: 85px;
     }
 
-    #aboutBody main section .headingDiv h1{
+    #aboutBody main section .headingDiv h1 {
         font-size: 2em;
     }
 
-    #section1{
+    #section1 {
         margin: 0px;
     }
 
-    #section2{
+    #section2 {
         display: flex;
         flex-direction: column;
     }
 
-    #section2 .pageLinks{
+    #section2 .pageLinks {
         width: 100%;
         margin: 0;
     }
 
-    .linkImgTitle{
+    .linkImgTitle {
         font-size: 1.25em;
     }
 
-    #section3 #form{
+    #section3 #form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #form button{
+    #form button {
         width: 30%;
         margin-top: 10px;
     }
 
-    .mainText p{
+    .mainText p {
         font-size: 18px;
     }
-    
-    .body2{
+
+    .body2 {
         background-repeat: repeat-y;
     }
 
-    .subHeading{
+    .subHeading {
         font-size: 18px;
     }
 
-    .contactDetails{
+    .contactDetails {
         font-size: 15px;
     }
 
-    .galleryHeading{
+    .galleryHeading {
         padding-right: 15px;
         text-align: center;
     }
 
-    .galleryHeading h1{
+    .galleryHeading h1 {
         font-size: 1.75em;
     }
 
-    .imgSection{
+    .imgSection {
         background-size: 900px;
         height: 66.5vh;
     }
 }
 
-@media(max-width:1024px){
-    .mainNav, .body2 .mainNav{
+@media(max-width:1024px) {
+
+    .mainNav,
+    .body2 .mainNav {
         justify-content: space-between;
         /* background: rgba(0, 0, 0, 0.5); */
     }
 
-    #menuIcon{
+    #menuIcon {
         margin: 15px 0 0 15px;
         display: block;
     }
 
-    .cartLink{
+    .cartLink {
         margin: 15px 15px 0 0;
     }
-    .mainNav ul{
+
+    .mainNav ul {
         display: block;
         position: fixed;
         max-width: 100%;
@@ -771,52 +798,52 @@ main section{
         left: -100%;
         background: black;
         text-align: center;
-        margin:0;
+        margin: 0;
         transition: all 0.5s;
     }
 
-    .mainNavContent li{
+    .mainNavContent li {
         margin: 30px 0;
     }
 
-    .mainNav ul hr{
+    .mainNav ul hr {
         display: none;
     }
 
-    .pageLink{
+    .pageLink {
         border-bottom: none !important;
     }
 
-    main{
+    main {
         width: 100%;
     }
 
-    main section{
+    main section {
         width: 100%;
     }
 
-    .contactPageContent{
+    .contactPageContent {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .contactPageContent div{
+    .contactPageContent div {
         width: 70%;
         margin: 20px 0;
     }
 
-    .contactPage main{
+    .contactPage main {
         margin-bottom: 150px;
     }
 
-    .menuContainer{
+    .menuContainer {
         width: 100%;
         margin: 0 0 50px;
     }
 
-    .galleryBody .mainNav .mainNavContent{
+    .galleryBody .mainNav .mainNavContent {
         z-index: 2;
     }
 
@@ -824,33 +851,36 @@ main section{
         z-index: 2;
     }
 
-    .pageFooter{
+    .pageFooter {
         height: auto;
     }
-    .footerContent{
+
+    .footerContent {
         display: flex;
         flex-direction: column;
     }
 
-    .footerContent p{
+    .footerContent p {
         margin: 3px 0;
         line-height: 10px;
         font-size: 12px;
     }
 }
 
-@media(min-width: 1024px){
-    .canvas{
+@media(min-width: 1024px) {
+    .canvas {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, auto-flow);
     }
 
-    .canvas .img:first-child, .canvas .img:nth-child(7), .canvas img:nth-child(8){
+    .canvas .img:first-child,
+    .canvas .img:nth-child(7),
+    .canvas img:nth-child(8) {
         grid-column: span 2;
         grid-row: span 1;
     }
 
-    .canvas-item:nth-child(2){
+    .canvas-item:nth-child(2) {
         grid-column: span 2;
         grid-row: span 2;
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,33 @@
     <title>Reservations - Steak and Sip - Steakhouse and Winery Restaurant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
+
 <body class="body2" id="reservationsBody">
     <header>
         <nav class="mainNav">
-            <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="500px" height="500px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+            <svg id="menuIcon" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="500px"
+                height="500px">
+                <path
+                    d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z" />
+            </svg>
 
             <ul class="mainNavContent">
-                <li><a class="pageLink homeLink" href="index.html">HOME</a></li><hr>
-                <li><a class="pageLink menuLink" href="menu.html">MENU</a></li><hr>
-                <li><a class="pageLink reservationsLink" href="reservations.html" style="border-bottom: 2px solid #ffffff">RESERVATIONS</a></li><hr>
-                <li><a class="pageLink galleryLink" href="gallery.html">GALLERY</a></li><hr>
-                <li><a class="pageLink aboutLink" href="about.html">ABOUT</a></li><hr>
+                <li><a class="pageLink homeLink" href="index.html">HOME</a></li>
+                <hr>
+                <li><a class="pageLink menuLink" href="menu.html">MENU</a></li>
+                <hr>
+                <li><a class="pageLink reservationsLink" href="reservations.html"
+                        style="border-bottom: 2px solid #ffffff">RESERVATIONS</a></li>
+                <hr>
+                <li><a class="pageLink galleryLink" href="gallery.html">GALLERY</a></li>
+                <hr>
+                <li><a class="pageLink aboutLink" href="about.html">ABOUT</a></li>
+                <hr>
                 <li><a class="pageLink contactLink" href="contact.html">CONTACT</a></li>
             </ul>
 
@@ -34,11 +47,14 @@
             <div class="headingDiv">
                 <h1 class="mainHeading">RESERVATIONS</h1>
             </div>
-    
+
             <div class="reservationNotice mainText">
-                <p>Tables for walk-ins are not always guaranteed, so reservations are strongly advised, against disappointments.<br> We have a 20 minutes grace period, after which you may lose your table if you have not arrived.<br> Please contact us if you will be running late. All reservations are made for a maximum of 2 hours.</p>
+                <p>Tables for walk-ins are not always guaranteed, so reservations are strongly advised, against
+                    disappointments.<br> We have a 20 minutes grace period, after which you may lose your table if you
+                    have not arrived.<br> Please contact us if you will be running late. All reservations are made for a
+                    maximum of 2 hours.</p>
             </div>
-    
+
             <form class="reservationSelection">
                 <legend id="legend" class="select">Make a Reservation</legend>
                 <input type="date" class="select" id="date" name="date" required>
@@ -81,7 +97,7 @@
                 </select>
                 <button class="select" onclick="toggle()" href="#">CHECK AVAILABILITY</button>
             </form>
-    
+
             <div class="reservationNotice mainText">
                 <p>Contact us if you would like to make a reservation larger than a party of 12.</p>
             </div>
@@ -133,8 +149,31 @@
                     </select>
                     <button class="select2" href="#">CHECK AVAILABILITY</button>
                 </form>
+                <h3>2. Your Details</h3>
+                <form action="" id="secondForm" class="confirm">
+                    <input type="text" id="" class="" name="firstName" required placeholder="First Name">
+                    <input type="text" id="" class="" name="lastName" required placeholder="Last Name">
+                    <input type="number" id="" class="" name="phoneNumber" required placeholder="Phone Number">
+                    <input type="text" id="" class="" name="email" required placeholder="E-mail Address">
+                    <select name="occasion" id="" class="">
+                        <option value="" disabled selected hidden>Select an Occasion (optional)</option>
+                        <option value="none">None</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="anniversary">Anniversary</option>
+                        <option value="date">Date</option>
+                        <option value="special occasion">Special Occasion</option>
+                        <option value="business meal">Business Meal</option>
+                    </select>
+                    <input type="text" id="" class="" name="request" placeholder="Special Requests (optional)">
+                    <p>*We endeavour to meet all requests, regrettable some cannot be guaranteed.*</p>
+                    <button>CONFIRM BOOKING</button>
+                </form>
             </section>
+            
         </div>
+
+        <button class="closePopup" onclick="closePopup()"></button>
+
     </div>
 
     <footer class="pageFooter">
@@ -146,18 +185,20 @@
     </footer>
     <script src="script.js"></script>
     <script type="text/javascript">
-        function toggle(){
+        function toggle() {
             var blur = document.getElementById('blur');
             blur.classList.toggle('active');
             var popup = document.getElementById('popup');
             popup.classList.toggle('active');
         }
+        function closePopup() {
+            var close = document.getElementById('popup');
+            close.classList.toggle('active')
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+        }
 
-        $('body').click(function() {
-            if (!$(this.target).is('#secondForm')) {
-                $(".modalDialog").hide();
-            }
-        });
     </script>
 </body>
+
 </html>
