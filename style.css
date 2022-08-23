@@ -433,7 +433,6 @@ main section{
     height: auto;
     margin: 0.5rem;
     position: relative;
-    z-index: -1;
 }
 
 .canvas .img img{
@@ -758,6 +757,10 @@ main section{
         width: 100%;
         margin: 0 0 50px;
     }
+
+    /* .canvas .img{
+        z-index: -1;
+    } */
 
     .pageFooter{
         height: auto;
