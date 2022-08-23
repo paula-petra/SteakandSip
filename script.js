@@ -3,3 +3,8 @@ $(document).ready(function(){
         $('ul').toggleClass('showTheMenu');
     });
 });
+
+// function toggle(){
+//     var blur = document.getElementById('blur');
+//     blur.classList.toggle('active')
+// }
