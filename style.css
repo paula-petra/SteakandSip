@@ -379,8 +379,17 @@ main section {
     height: 30px;
 }
 
-.reservationSelection button {
+.reservationSelection a {
     margin: 15px 0;
+    color: black;
+    background-color: #ffffff;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.reservationSelection a:hover{
+    background-color: grey;
+    color: white;
 }
 
 #popup>* {

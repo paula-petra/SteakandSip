@@ -61,6 +61,7 @@
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
                 <input type="date" min="2022-08-24" class="" id="date" name="date" required>
                 </div>
+                <input type="hidden" name="onhold" >
                 <select class="select" id="time" name="time" required>
                     <option value=""disabled selected hidden>Time*</option>
                     <option value="11:00 A.M.">11:00 A.M.</option>
@@ -86,7 +87,7 @@
                     <option value="09:00 P.M.">09:00 P.M.</option>
                 </select>
                 <select class="select" id="guests" name="guests" required>
-                    <option value=""disabled selected hidden>Number of Guests*</option>
+                    <option value=""disabled selected hidden>No. of Guests*</option>
                     <option value="1 guest">1 guest</option>
                     <option value="2 guests">2 guests</option>
                     <option value="3 guests">3 guests</option>
@@ -100,7 +101,7 @@
                     <option value="11 guests">11 guests</option>
                     <option value="12 guests">12 guests</option>
                 </select>
-                <button class="select" onclick="toggle()" href="#">CHECK AVAILABILITY</button>
+                <a class="select" onclick="toggle()" >CHECK AVAILABILITY</a>
             </form>
 
             <div class="reservationNotice mainText">
@@ -192,7 +193,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <!-- <script type="text/javascript"></script> -->
 </body>
 
 </html>
