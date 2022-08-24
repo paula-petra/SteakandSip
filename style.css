@@ -766,8 +766,12 @@ main section {
         margin-top: 10px;
     }
 
-    .mainText p {
+    .mainText p{
         font-size: 18px;
+    }
+
+    .reservationSelection a {
+        font-size: 0.6em;
     }
 
     .body2 {
