@@ -343,7 +343,19 @@ main section {
 }
 
 .select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 70%;
+    height: 30px;
+    padding: 0;
+    margin: 3px 0;
+    border: 0;
+} 
+
+.select #date{
+    width: 90%;
     height: 30px;
     padding: 0;
     margin: 3px 0;
@@ -360,6 +372,11 @@ main section {
     text-align: center;
     font-weight: 700;
     margin: 15px 0 25px;
+}
+
+.reservationSelection img{
+    width: 30px;
+    height: 30px;
 }
 
 .reservationSelection button {

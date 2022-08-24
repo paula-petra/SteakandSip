@@ -57,8 +57,12 @@
 
             <form class="reservationSelection">
                 <legend id="legend" class="select">Make a Reservation</legend>
-                <input type="date" class="select" id="date" name="date" required>
+                <div class="select">
+                    <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
+                <input type="date" min="2022-08-24" class="" id="date" name="date" required>
+                </div>
                 <select class="select" id="time" name="time" required>
+                    <option value=""disabled selected hidden>Time*</option>
                     <option value="11:00 A.M.">11:00 A.M.</option>
                     <option value="11:30 A.M.">11:30 A.M.</option>
                     <option value="12:00 P.M.">12:00 P.M.</option>
@@ -82,6 +86,7 @@
                     <option value="09:00 P.M.">09:00 P.M.</option>
                 </select>
                 <select class="select" id="guests" name="guests" required>
+                    <option value=""disabled selected hidden>Number of Guests*</option>
                     <option value="1 guest">1 guest</option>
                     <option value="2 guests">2 guests</option>
                     <option value="3 guests">3 guests</option>
@@ -109,7 +114,10 @@
             <section class="confirmation">
                 <h3>1. Confirm Selection</h3>
                 <form action="" id="secondForm" class="confirm">
-                    <input type="date" class="select2" id="date2" name="date" required>
+                    <div>
+                        <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
+                        <input type="date" class="select2" id="date2" name="date" required>
+                    </div>
                     <select class="select2" id="time2" name="time" required>
                         <option value="11:00 A.M.">11:00 A.M.</option>
                         <option value="11:30 A.M.">11:30 A.M.</option>
@@ -147,14 +155,14 @@
                         <option value="11 guests">11 guests</option>
                         <option value="12 guests">12 guests</option>
                     </select>
-                    <button class="select2" href="#">CHECK AVAILABILITY</button>
+                    <button class="select2" href="#">SELECT</button>
                 </form>
                 <h3>2. Your Details</h3>
                 <form action="" id="secondForm" class="confirm">
-                    <input type="text" id="" class="" name="firstName" required placeholder="First Name">
-                    <input type="text" id="" class="" name="lastName" required placeholder="Last Name">
-                    <input type="number" id="" class="" name="phoneNumber" required placeholder="Phone Number">
-                    <input type="text" id="" class="" name="email" required placeholder="E-mail Address">
+                    <input type="text" id="" class="" name="firstName" required placeholder="First Name*">
+                    <input type="text" id="" class="" name="lastName" required placeholder="Last Name*">
+                    <input type="tel" id="" class="" name="phoneNumber" required placeholder="Phone Number*">
+                    <input type="text" id="" class="" name="email" required placeholder="E-mail Address*">
                     <select name="occasion" id="" class="">
                         <option value="" disabled selected hidden>Select an Occasion (optional)</option>
                         <option value="none">None</option>
@@ -184,21 +192,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script type="text/javascript">
-        function toggle() {
-            var blur = document.getElementById('blur');
-            blur.classList.toggle('active');
-            var popup = document.getElementById('popup');
-            popup.classList.toggle('active');
-        }
-        function closePopup() {
-            var close = document.getElementById('popup');
-            close.classList.toggle('active')
-            var blur = document.getElementById('blur');
-            blur.classList.toggle('active');
-        }
-
-    </script>
+    <!-- <script type="text/javascript"></script> -->
 </body>
 
 </html>
