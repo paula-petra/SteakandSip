@@ -18,6 +18,7 @@ function closePopup() {
     blur.classList.toggle('active');
 }
 
+//make past dates obsolete
 var date = new Date();
 var tdate = date.getDate();
 var month = date.getMonth() + 1;
@@ -39,11 +40,13 @@ document.getElementById('date2').setAttribute('min', minDate);
 
 var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){
     console.log(this.value);
+
 });
 
 var selectedTime = document.getElementById('time');
 selectedTime.addEventListener('change', function handleChange(e){
-    console.log(e.target.value);
+    localStorage.setItem("timevalue", e.target.value);
+    console.log("IME FROM STORAGE IS: ",localStorage.getItem('timevalue'));
 });
 
 var guestNumber = document.getElementById('guests');
@@ -51,17 +54,53 @@ guestNumber.addEventListener('change', function handleChange(e){
     console.log(e.target.value);
 });
 
-var checkBtn =  document.querySelector('a[id="anchorBtn"]')
+
+let input1 = document.getElementById('date');
+let input2 = document.getElementById('time');
+let input3 = document.getElementById('guests');
+var checkBtn = document.querySelector('input[type="submit"]')
 checkBtn.disabled = true;
 
-// selectedDate.addEventListener("change", stateHandle);
-selectedTime.addEventListener("change", stateHandle);
-guestNumber.addEventListener("change", stateHandle);
+input1.addEventListener("change", stateHandle);
+input2.addEventListener("change", stateHandle);
+input3.addEventListener("change", stateHandle);
 
+//form validation
 function stateHandle() {
-    if(selectedTime === "" || guestNumber === "") {
-        button.disabled = true;
+    if(input1.value === ""|| input2.value === ""|| input3.value === "") {
+        checkBtn.disabled = true;
     } else {
-        button.disabled = false;
+        checkBtn.disabled = false;
+    }
+}
+
+//prevents button from refreshing page (JQuery)
+$('#reservationForm1').submit(function(e) {
+    e.preventDefault();
+
+    // function passvalues() {
+    //     var reservedTime = input2.value;
+    //     localStorage.setItem("timevalue", reservedTime);
+    //     return true;
+    // }
+
+    // passvalues();
+
+});
+
+//move values to second form
+
+let myTime = localStorage.getItem("timevalue");
+
+
+console.log("MY TIME IS",myTime);
+//document.querySelector('input[id="time2"]').value= myTime;
+//document.getElementById("time2").value = myTime;
+// let temp = myTime
+var dropTime = document.getElementById('time2');
+for (var i, j=0; i = dropTime.options[j]; j++){
+    if(i.value === myTime){
+        dropTime.selectedIndex = j;
+        break;
     }
 }

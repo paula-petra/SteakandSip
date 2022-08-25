@@ -55,14 +55,13 @@
                     maximum of 2 hours.</p>
             </div>
 
-            <form class="reservationSelection">
+            <form id="reservationForm1" class="reservationSelection">
                 <legend id="legend" class="select">Make a Reservation</legend>
                 <div class="select">
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
-                <input type="date" min="2022-08-24" class="" id="date" name="date" required>
+                <input class="pick" id="date" type="date"  name="date" min="2022-08-24"  required>
                 </div>
-                <input type="hidden" name="onhold" >
-                <select class="select" id="time" name="time" required>
+                <select class="select pick" id="time" name="time" required>
                     <option value=""disabled selected hidden>Time*</option>
                     <option value="11:00 A.M.">11:00 A.M.</option>
                     <option value="11:30 A.M.">11:30 A.M.</option>
@@ -86,7 +85,7 @@
                     <option value="08:30 P.M.">08:30 P.M.</option>
                     <option value="09:00 P.M.">09:00 P.M.</option>
                 </select>
-                <select class="select" id="guests" name="guests" required>
+                <select class="select pick" id="guests" name="guests" required>
                     <option value=""disabled selected hidden>No. of Guests*</option>
                     <option value="1 guest">1 guest</option>
                     <option value="2 guests">2 guests</option>
@@ -101,7 +100,7 @@
                     <option value="11 guests">11 guests</option>
                     <option value="12 guests">12 guests</option>
                 </select>
-                <a class="select" id="anchorBtn" onclick="toggle()">CHECK AVAILABILITY</a>
+                <input type="submit" class="select" id="Btn" value="CHECK AVAILABILITY" onclick="toggle();">
             </form>
 
             <div class="reservationNotice mainText">
@@ -119,7 +118,7 @@
                         <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
                         <input type="date" class="select2" id="date2" name="date" required>
                     </div>
-                    <select class="select2" id="time2" name="time" required>
+                    <select class="select2" id="time2" name="time2" required>
                         <option value="11:00 A.M.">11:00 A.M.</option>
                         <option value="11:30 A.M.">11:30 A.M.</option>
                         <option value="12:00 P.M.">12:00 P.M.</option>
@@ -142,7 +141,7 @@
                         <option value="08:30 P.M.">08:30 P.M.</option>
                         <option value="09:00 P.M.">09:00 P.M.</option>
                     </select>
-                    <select class="select2" id="guests2" name="guests" required>
+                    <select class="select2" id="guests2" name="guests2" required>
                         <option value="1 guest">1 guest</option>
                         <option value="2 guests">2 guests</option>
                         <option value="3 guests">3 guests</option>
