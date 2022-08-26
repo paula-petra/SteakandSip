@@ -9,6 +9,7 @@ function toggle() {
     blur.classList.toggle('active');
     var popup = document.getElementById('popup');
     popup.classList.toggle('active');
+    setFormValues();
 }
 
 function closePopup() {
@@ -39,21 +40,28 @@ document.getElementById('date2').setAttribute('min', minDate);
 //  console.log(minDate);
 
 var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){
-    console.log(this.value);
-
+    console.log('datevalue', this.value);
+    localStorage.setItem("datevalue", this.value);
 });
 
 var selectedTime = document.getElementById('time');
 selectedTime.addEventListener('change', function handleChange(e){
     localStorage.setItem("timevalue", e.target.value);
-    console.log("IME FROM STORAGE IS: ",localStorage.getItem('timevalue'));
+    console.log(localStorage.getItem('timevalue'));
 });
 
 var guestNumber = document.getElementById('guests');
 guestNumber.addEventListener('change', function handleChange(e){
+    localStorage.setItem("guests", e.target.value);
     console.log(e.target.value);
 });
 
+function setFormValues(){
+    console.log('timevalues', localStorage.getItem('timevalue'));
+    document.getElementById('time2').value = localStorage.getItem('timevalue');
+    document.getElementById('guests2').value = localStorage.getItem('guests');
+    document.getElementById('date2').value = localStorage.getItem('datevalue');
+}
 
 let input1 = document.getElementById('date');
 let input2 = document.getElementById('time');
@@ -78,29 +86,9 @@ function stateHandle() {
 $('#reservationForm1').submit(function(e) {
     e.preventDefault();
 
-    // function passvalues() {
-    //     var reservedTime = input2.value;
-    //     localStorage.setItem("timevalue", reservedTime);
-    //     return true;
-    // }
-
-    // passvalues();
-
 });
 
-//move values to second form
+$('secondForm').submit(function(e) {
+    e.preventDefault();
 
-let myTime = localStorage.getItem("timevalue");
-
-
-console.log("MY TIME IS",myTime);
-//document.querySelector('input[id="time2"]').value= myTime;
-//document.getElementById("time2").value = myTime;
-// let temp = myTime
-var dropTime = document.getElementById('time2');
-for (var i, j=0; i = dropTime.options[j]; j++){
-    if(i.value === myTime){
-        dropTime.selectedIndex = j;
-        break;
-    }
-}
+});

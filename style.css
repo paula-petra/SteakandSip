@@ -342,7 +342,7 @@ main section {
     padding: 10px;
 }
 
-.select {
+.select, .select2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -354,15 +354,15 @@ main section {
     border: 0;
 } 
 
-.select #date{
-    width: 90%;
+.select #date, .select2 #date2{
+    width: 95%;
     height: 30px;
     padding: 0;
     margin: 3px 0;
     border: 0;
 }
 
-.select:hover {
+.select:hover, .select2:hover {
     cursor: pointer;
 }
 
@@ -374,22 +374,13 @@ main section {
     margin: 15px 0 25px;
 }
 
-.reservationSelection img{
-    width: 30px;
-    height: 30px;
+.select img, .select2 img{
+    width: 25px;
+    height: 25px;
 }
 
-.reservationSelection a {
+#Btn{
     margin: 15px 0;
-    color: black;
-    background-color: #ffffff;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.reservationSelection a:hover{
-    background-color: grey;
-    color: white;
 }
 
 #popup>* {
@@ -397,7 +388,7 @@ main section {
 }
 
 #popup {
-    position: fixed;
+    position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -416,6 +407,42 @@ main section {
     opacity: 1;
     transition: 0.5s;
 
+}
+
+#popup h2, .confirm h3{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#thirdForm p{
+    text-align: center;
+}
+
+#thirdForm .select2{
+    border-bottom: 0.5px grey solid;
+}
+
+#special{
+    height: 60px;
+}
+
+.confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Btn2{
+    border-radius: 30px;
+    width: 75%;
+    transition: 0.5s;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+}
+
+#Btn2:hover{
+    
+    color: white;
 }
 
 .aboutText h2 {

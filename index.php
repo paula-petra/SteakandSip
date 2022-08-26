@@ -73,14 +73,25 @@
             <div class="subHeading">
                 SIGN UP TO OUR NEWSLETTER TO RECEIVE UPDATES
             </div>
-            <h1 style="color:#ffffff;" > <?php  echo "momo"; ?></h1>
-                
+            <h2>
+            <?php
+
+if(isset($_GET['error'])){?>
+
+<p class="error"><?php echo $_GET['error']; ?></p>
+
+<?php } ?>
+
+
+            </h2>
+           
+                                
             <form id="form" action="newsletter.php" method="POST">
                 <div class="div1">
                     <input type="text" class="formBox newsletterContact" id="fullName" name="fullName" placeholder="Full Name" required>
                     <input type="text" class=" formBox newsletterContact" id="email" name="email" placeholder="E-mail Address" required>
                 </div>
-                <button class="formBox sendButton">SIGN UP</button>
+                <button class="formBox sendButton" name="login">SIGN UP</button>
             </form>
         </section>
     </main>

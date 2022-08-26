@@ -12,7 +12,10 @@ $stmt = "SELECT * FROM `newsletter` WHERE email ='$email'  ";
 $s=mysqli_query ($conn, $stmt);
 
 if(mysqli_num_rows($s)>0){
-    header("Location: index.html?error=The Email Is Already In Use ");
+    header("Location: index.php?error=The Email Is Already In Use ");
+    
+    
+    exit();
 }
 
 ?>
