@@ -55,11 +55,11 @@
                     maximum of 2 hours.</p>
             </div>
 
-            <form id="reservationForm1" class="reservationSelection">
+            <form id="reservationForm1" class="reservationSelection" >
                 <legend id="legend" class="select">Make a Reservation</legend>
                 <div class="select">
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
-                    <input class="select pick" id="date" type="date"  name="date" min="2022-08-24"  required>
+                    <input class="select pick" id="date" type="date"  name="date" min="2022-08-29"  required>
                 </div>
                 <select class="select pick" id="time" name="time" required>
                     <option value=""disabled selected hidden>Time*</option>
@@ -100,7 +100,7 @@
                     <option value="11 guests">11 guests</option>
                     <option value="12 guests">12 guests</option>
                 </select>
-                <input type="submit" class="select" id="Btn" value="CHECK AVAILABILITY" onclick="toggle();">
+                <input type="submit" class="select" id="Btn" value="CHECK AVAILABILITY" onclick="location.href='booking.html'" >
             </form>
 
             <div class="reservationNotice mainText">
@@ -108,7 +108,7 @@
             </div>
         </div>
     </main>
-    <div id="popup" class="popUp">
+    <!-- <div id="popup" class="popUp">
         <h2>Steak and Sip Booking</h2>
         <form method="POST" action="booking.php" id="secondForm" class="confirm"  >
             <h3>1. Confirm Selection</h3>
@@ -178,7 +178,7 @@
 
         <button class="closePopup" onclick="closePopup()"></button>
 
-    </div>
+    </div> -->
 
     <footer class="pageFooter">
         <div class="footerContent">

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Steak and Sip - Steakhouse and Winery Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body class="bookingBody">
+    <div id="" class="container">
+        <h2>Steak and Sip Booking</h2>
+        <form method="" action="" id="secondForm" class="confirm"  >
+            <h3>CONFIRM SELECTION</h3>
+            <div class="select2 date2">
+                <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
+                <input type="date" min="2022-08-29" class="select2 date2" id="date2" name="date" required >
+            </div>
+            <select class="select2 time2" id="time2" name="time2" required>
+                <option value="11:00 A.M.">11:00 A.M.</option>
+                <option value="11:30 A.M.">11:30 A.M.</option>
+                <option value="12:00 P.M.">12:00 P.M.</option>
+                <option value="12:30 P.M.">12:30 P.M.</option>
+                <option value="01:00 P.M.">01:00 P.M.</option>
+                <option value="01:30 P.M.">01:30 P.M.</option>
+                <option value="02:00 P.M.">02:00 P.M.</option>
+                <option value="02:30 P.M.">02:30 P.M.</option>
+                <option value="03:00 P.M.">03:00 P.M.</option>
+                <option value="03:30 P.M.">03:30 P.M.</option>
+                <option value="04:00 P.M.">04:00 P.M.</option>
+                <option value="04:30 P.M.">04:30 P.M.</option>
+                <option value="05:00 P.M.">05:00 P.M.</option>
+                <option value="05:30 P.M.">05:30 P.M.</option>
+                <option value="06:00 P.M.">06:00 P.M.</option>
+                <option value="06:30 P.M.">06:30 P.M.</option>
+                <option value="07:00 P.M.">07:00 P.M.</option>
+                <option value="07:30 P.M.">07:30 P.M.</option>
+                <option value="08:00 P.M.">08:00 P.M.</option>
+                <option value="08:30 P.M.">08:30 P.M.</option>
+                <option value="09:00 P.M.">09:00 P.M.</option>
+            </select>
+            <select class="select2 guests2" id="guests2" name="guests2" required>
+                <option value="1 guest">1 guest</option>
+                <option value="2 guests">2 guests</option>
+                <option value="3 guests">3 guests</option>
+                <option value="4 guests">4 guests</option>
+                <option value="5 guests">5 guests</option>
+                <option value="6 guests">6 guests</option>
+                <option value="7 guests">7 guests</option>
+                <option value="8 guests">8 guests</option>
+                <option value="9 guests">9 guests</option>
+                <option value="10 guests">10 guests</option>
+                <option value="11 guests">11 guests</option>
+                <option value="12 guests">12 guests</option>
+            </select>
+
+            <div class="btn-box">
+                <button type="button" class="" id="next">NEXT</button>
+            </div>
+        </form>
+        
+        <form action="" id="thirdForm" class="confirm">
+            <h3>Your Details</h3>
+            <input type="text" id="" class="select2" name="firstName" required placeholder="First Name*" autocomplete="off">
+            <input type="text" id="" class="select2" name="lastName" required placeholder="Last Name*" autocomplete="off">
+            <input type="tel" id="" class="select2" name="phoneNumber" required placeholder="Phone Number*" autocomplete="off">
+            <input type="text" id="" class="select2" name="email" required placeholder="E-mail Address*" autocomplete="off">
+            <select name="occasion" id="occasion" class="select2">
+                <option value="" disabled selected hidden>Select an Occasion (optional)</option>
+                <option value="none">None</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="date">Date</option>
+                <option value="special occasion">Special Occasion</option>
+                <option value="business meal">Business Meal</option>
+            </select>
+            <input type="text" id="special" class="select2" name="request" placeholder="Special Requests (optional)" autocomplete="off">
+            <p>*We endeavour to meet all requests, regrettable some cannot be guaranteed.*</p>
+            
+            <div class="btn-box">
+                <button type="button" class="" id="back">BACK</button>
+                <button type="submit" class="" id="confirmBtn">CONFIRM</button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>1</small></div>
+            <div class="step-col"><small>2</small></div>
+        </div>
+
+        <!-- <button class="closePopup" onclick="closePopup()"></button> -->
+
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        var form1 = document.getElementById('secondForm');
+        var form2 = document.getElementById('thirdForm');
+
+        var next = document.getElementById('next');
+        var back = document.getElementById('back');
+        var confirm = document.getElementById('confirmBtn');
+        next.onclick = function(){
+        form1.style.left = '-450px'
+        form2.style.left = '40px';
+}
+    </script>
+</body>
+</html>

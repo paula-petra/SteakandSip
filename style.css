@@ -383,11 +383,128 @@ main section {
     margin: 15px 0;
 }
 
+.bookingBody{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(imgs/gallery/tomahawk.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bookingBody .container{
+    width: 50%;
+    height: 680px;
+    margin: 8% auto;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bookingBody .container h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.bookingBody .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    left: 5%;
+}
+
+.confirm .select2{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.confirm .time2, .confirm .guests2, .confirm #occasion{
+    height: 50px;
+}
+
+.confirm .date2, .confirm .time2, .confirm .guests2{
+    border-bottom:1px solid #999;
+}
+
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.bookingBody .container form button{
+    width: 30%;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#secondForm .btn-box{
+    margin-top: 316px;
+}
+
+#thirdForm{
+    left: 450px;
+}
+
+.step-row{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+    top: -50px;
+}
+
+.step-col{
+    width: 50%;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+}
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #ffad06;
+}
+
+/* .confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
 #popup>* {
     color: black;
 }
 
-#popup {
+/* #popup {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -399,7 +516,7 @@ main section {
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
 #popup.active {
     top: 50%;
@@ -426,14 +543,7 @@ main section {
     height: 60px;
 }
 
-.confirm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#Btn2{
+/* #Btn2{
     border-radius: 30px;
     width: 75%;
     transition: 0.5s;
@@ -443,7 +553,7 @@ main section {
 #Btn2:hover{
     
     color: white;
-}
+} */
 
 .aboutText h2 {
     display: inline-block;
@@ -826,6 +936,14 @@ main section {
         background-size: 900px;
         height: 66.5vh;
     }
+
+    .bookingBody .container form{
+        top: -1px;
+    }
+
+    #secondForm .btn-box{
+        margin-top: 312px;
+    }
 }
 
 @media(max-width:1024px) {
@@ -940,5 +1058,9 @@ main section {
     .canvas-item:nth-child(2) {
         grid-column: span 2;
         grid-row: span 2;
+    }
+
+    #secondForm .btn-box{
+        margin-top: 296px;
     }
 }

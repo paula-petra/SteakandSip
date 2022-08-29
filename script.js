@@ -4,20 +4,7 @@ $(document).ready(function(){
     });
 });
 
-function toggle() {
-    var blur = document.getElementById('blur');
-    blur.classList.toggle('active');
-    var popup = document.getElementById('popup');
-    popup.classList.toggle('active');
-    setFormValues();
-}
-
-function closePopup() {
-    var close = document.getElementById('popup');
-    close.classList.toggle('active')
-    var blur = document.getElementById('blur');
-    blur.classList.toggle('active');
-}
+//  
 
 //make past dates obsolete
 var date = new Date();
@@ -36,8 +23,7 @@ var year = date.getUTCFullYear();
 var minDate = year + '-' + month + '-' + tdate;
 document.getElementById('date').setAttribute('min', minDate);
 document.getElementById('date2').setAttribute('min', minDate);
-
-//  console.log(minDate);
+console.log(minDate);
 
 var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){
     console.log('datevalue', this.value);
@@ -66,7 +52,7 @@ function setFormValues(){
 let input1 = document.getElementById('date');
 let input2 = document.getElementById('time');
 let input3 = document.getElementById('guests');
-var checkBtn = document.querySelector('input[type="submit"]')
+var checkBtn = document.querySelector('input[type="submit"]');
 checkBtn.disabled = true;
 
 input1.addEventListener("change", stateHandle);
@@ -92,3 +78,15 @@ $('secondForm').submit(function(e) {
     e.preventDefault();
 
 });
+
+// var form1 = document.getElementById('secondForm');
+// var form2 = document.getElementById('thirdForm');
+
+// var next = document.getElementById('next');
+// var back = document.getElementById('back');
+// var confirm = document.getElementById('confirmBtn');
+
+// next.onclick = function(){
+//     form1.style.left = '-450px'
+//     form2.style.left = '40px';
+// }
