@@ -22,7 +22,7 @@ if(month < 10){
 var year = date.getUTCFullYear();
 var minDate = year + '-' + month + '-' + tdate;
 document.getElementById('date').setAttribute('min', minDate);
-document.getElementById('date2').setAttribute('min', minDate);
+
 console.log(minDate);
 
 var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){

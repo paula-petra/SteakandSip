@@ -396,6 +396,7 @@ main section {
     background: #fff;
     border-radius: 5px;
     position: relative;
+    overflow: hidden;
 }
 
 .bookingBody .container h3{
@@ -411,6 +412,8 @@ main section {
     width: 90%;
     position: absolute;
     left: 5%;
+    top: 50px;
+    transition: 0.5s;
 }
 
 .confirm .select2{
@@ -453,7 +456,7 @@ main section {
 }
 
 #thirdForm{
-    left: 450px;
+    left: 960px;
 }
 
 .step-row{
@@ -464,7 +467,6 @@ main section {
     align-items: center;
     box-shadow: 0 -1px 5px -1px #000;
     position: relative;
-    top: -50px;
 }
 
 .step-col{
@@ -479,6 +481,8 @@ main section {
     height: 100%;
     width: 50%;
     background: linear-gradient(to right, #ff105f, #ffad06);
+    border-top-left-radius: 5px;
+    transition: 1s;
 }
 
 #progress::after{
@@ -938,7 +942,7 @@ main section {
     }
 
     .bookingBody .container form{
-        top: -1px;
+        top: 40px;
     }
 
     #secondForm .btn-box{
