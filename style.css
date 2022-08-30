@@ -941,6 +941,10 @@ main section {
         height: 66.5vh;
     }
 
+    .bookingBody .container{
+        width: 75%;
+    }
+
     .bookingBody .container form{
         top: 40px;
     }
