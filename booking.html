@@ -99,8 +99,21 @@
 
     </div>
 
+    <footer class="pageFooter">
+        <div class="footerContent">
+            <p>&copy;2022, STEAK AND SIP</p>
+            <p>DINE-IN / TAKEOUT / DELIVERY</p>
+            <P>0 (542) 123-456 . 7890 AVENUE I NICOSIA</P>
+        </div>
+    </footer>
+
     <!-- <script src="script.js"></script> -->
     <script>
+        console.log('timevalues', localStorage.getItem('timevalue'));
+        document.getElementById('time2').value = localStorage.getItem('timevalue');
+        document.getElementById('guests2').value = localStorage.getItem('guests');
+        document.getElementById('date2').value = localStorage.getItem('datevalue');
+
         var date = new Date();
         var tdate = date.getDate();
         var month = date.getMonth() + 1;
@@ -127,11 +140,41 @@
         var progress = document.getElementById('progress')
 
         next.onclick = function(){
+            console.log('next');
+
             form1.style.left = '-960px'
             form2.style.left = '5%';
             progress.style.width = '100%'
 
-            
+            let date2 = document.getElementById('date2');
+            let time2 = document.getElementById('time2');
+            let guests2 = document.getElementById('guests2');
+
+            date2.addEventListener("change", stateHandle);
+            time2.addEventListener("change", stateHandle);
+            guests2.addEventListener("change", stateHandle);
+
+            //form validation
+            function stateHandle() {
+                if(date2.value === ""|| time2.value === ""|| guests2.value === "") {
+                    next.disabled = true;
+                } else {
+                    next.disabled = false;
+                }
+            }
+        }  
+
+        back.onclick = function(){
+            console.log('back');
+
+            form1.style.left = '5%'
+            form2.style.left = '960px';
+            progress.style.width = '50%';
+        }  
+
+        confirm.onclick = function(){
+            console.log('confirm');
+
             let fName = querySelector('input[id="fName"]');
             let lName = querySelector('input[id="lName"]');
             let mobile = querySelector('input[id="mobile"]');
@@ -152,32 +195,11 @@
                     confirm.disabled = false;
                 }
             }
-        }  
-
-        back.onclick = function(){
-            form1.style.left = '5%'
-            form2.style.left = '960px';
-            progress.style.width = '50%';
-        }  
-        
-        let date2 = document.getElementById('date2');
-        let time2 = document.getElementById('time2');
-        let guests2 = document.getElementById('guests2');
-        
-        next.disabled = true;
-
-        date2.addEventListener("change", stateHandle);
-        time2.addEventListener("change", stateHandle);
-        guests2.addEventListener("change", stateHandle);
-
-        //form validation
-        function stateHandle() {
-            if(date2.value === ""|| time2.value === ""|| guests2.value === "") {
-                next.disabled = true;
-            } else {
-                next.disabled = false;
-            }
         }
+
+        // window.onload( () => {
+            
+        // });
     </script>
 </body>
 </html>
