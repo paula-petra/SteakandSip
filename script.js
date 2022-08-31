@@ -71,10 +71,16 @@ function stateHandle() {
 //prevents button from refreshing page (JQuery)
 $('#reservationForm1').submit(function(e) {
     e.preventDefault();
-    const url = location.pathname.includes('steak_and_sip')?'/steak_and_sip/booking.php':'/booking.php'
+    const url = location.pathname.includes('steak_and_sip')?'/steak_and_sip/booking.html':'/booking.html'
     console.log(url);
     window.open(url, '_blank');
 });
+
+$('secondForm').submit(function(e) {
+    e.preventDefault();
+
+});
+
 
 
 // var form1 = document.getElementById('secondForm');

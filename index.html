@@ -19,7 +19,7 @@
             <ul class="mainNavContent">
                 <li><a class="pageLink homeLink" href="index.html" style="border-bottom: 2px solid #ffffff;">HOME</a></li><hr>
                 <li><a class="pageLink menuLink" href="menu.html">MENU</a></li><hr>
-                <li><a class="pageLink reservationsLink" href="reservations.php">RESERVATIONS</a></li><hr>
+                <li><a class="pageLink reservationsLink" href="reservations.html">RESERVATIONS</a></li><hr>
                 <li><a class="pageLink galleryLink" href="gallery.html">GALLERY</a></li><hr>
                 <li><a class="pageLink aboutLink" href="about.html">ABOUT</a></li><hr>
                 <li><a class="pageLink contactLink" href="contact.html">CONTACT</a></li>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="pageLinks" id="reservations">
-                <a href="reservations.php">
+                <a href="reservations.html">
                     <img src="imgs/bell.jpg">
                     <div class="linkImgOverlay">
                         <div class="linkImgTitle">RESERVATIONS</div><hr>
