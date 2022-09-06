@@ -199,7 +199,7 @@
             mobile.addEventListener("change", stateHandle);
             eMail.addEventListener("change", stateHandle);
 
-            let fName = fName.value;
+            // let fName = fName.value;
             // let fName = fName.value;
             // let fName = fName.value;
             // let fName = fName.value;
