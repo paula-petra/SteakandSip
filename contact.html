@@ -36,17 +36,18 @@
                 <img src="imgs/contactpage.jpg">
             </div>
             <div class="contactForm">
-                <form action="contactForm.php" method="POST">
+                <form>
                     <h2 class="subHeading">LEAVE US A MESSAGE</h2>
                     <div id="div1">
-                        <input type="text" class="formBox" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" class="formBox" id="email" name="email" placeholder="Your e-mail" required>
+                        <input type="text" class="formBox input" data-name="name" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" class="formBox input" data-name="email" id="email" name="email" placeholder="Your e-mail" required>
                     </div>
                     <div id="div2">
-                        <input type="text" class="formBox" id="subject" name="subject" placeholder="Subject">
-                        <input type="text" class="formBox" id="message" name="message" placeholder="Message" required>
+                        <input type="text" class="formBox input" data-name="subject" id="subject" name="subject" placeholder="Subject">
+                        <input type="text" class="formBox input" data-name="msg" id="message" name="message" placeholder="Message" required>
+                        <input type="hidden" class="formBox input" data-name="btn" value="Send Message">
                     </div>
-                    <button class="formBox sendButton">Send Message</button>
+                    <button class="formBox sendButton submit" add data-ajax="controllers/contact.php" btn="Send Message">Send Message</button>
                 </form>
             </div>
             <div class="contactDetails">
@@ -66,6 +67,10 @@
             <P>0 (542) 123-456 . 7890 AVENUE I NICOSIA</P>
         </div>
     </footer>
-</body>
 <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="api/js/send.js"></script>
+</body>
+
 </html>

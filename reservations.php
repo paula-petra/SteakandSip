@@ -1,4 +1,5 @@
 <?php 
+// date_default_timezone_set("Europe/Malta");
 $mydate = date('Y-m-d');
 ?>
 <!DOCTYPE html>
@@ -62,33 +63,13 @@ $mydate = date('Y-m-d');
                 <legend id="legend" class="select">Make a Reservation</legend>
                 <div class="select">
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
-                    <input class="select pick" id="date" type="date"  name="date" min="<?php echo $mydate; ?>"  required>
+                    <input class="select pick date_picker" placeholder="pick a date" id="date" type="text"  name="date" required>
                 </div>
-                <select class="select pick" id="time" name="time" required>
-                    <option value=""disabled selected hidden>Time*</option>
-                    <?php
-                        $ser_dur = 30;
-                        
-                        $now = date('Y-m-d H:m:s');
-                        $now2 = '2022-08-31 12:16:00';
-                        $hr = date('H',strtotime($now2));
-                        echo $hr;
-                        //$hr = $now -> format('H');//date_parse($now)['hour'];
-                        $start = ((int)$hr+1)*60; //660;
-                        
-                        while ($start <= 1260) {
+                
+                
+                <select class="select pick timeOptions" id="time" name="time" required>
+                    <!--<option value=""disabled selected hidden>Time*</option>-->
                     
-                        $new_hour = floor($start/60);
-                        $new_minute = $start%60;
-                        if ($new_minute === 0) { $new_minute = "00 "; } else { $new_minute = $new_minute." "; }
-                        $unite_hm = $new_hour . ":" . $new_minute;
-                        
-                        ?>
-                        <option value="<?php echo $unite_hm; ?>" ><?php echo $unite_hm; ?></option>
-                        <?php
-                        $start += $ser_dur;
-                        }
-                    ?>
 
                     <!-- <option value=""disabled selected hidden>Time*</option>
                     <option value="11:00">11:00 </option>
@@ -134,6 +115,8 @@ $mydate = date('Y-m-d');
             <div class="reservationNotice mainText">
                 <p>Contact us if you would like to make a reservation larger than a party of 12.</p>
             </div>
+            
+            <input type="hidden" id="today" value="<?=$mydate?>">
         </div>
     </main>
     <!-- <div id="popup" class="popUp">
@@ -216,6 +199,77 @@ $mydate = date('Y-m-d');
         </div>
     </footer>
     <script src="script.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
+    <script>
+        $(document).ready(function()
+        {
+             var today = $("#today").val();
+             var numToday = new Date(today)
+             var day;
+             
+             var timeOptions = '<option value=""disabled selected hidden>Time</option>';
+        
+             $('.date_picker').datepicker({
+              dateFormat: "yy-mm-d",
+              minDate: new Date(today),
+              onSelect: function(dateText)
+              {
+                  localStorage.setItem("datevalue", this.value);
+                  $(this).change();
+                  var t = dateText.split('-');
+                  day = t[2];
+                  
+                  var pickedDate = new Date(dateText);
+                  var diff = parseInt(pickedDate.getTime() - numToday.getTime());
+                
+                 var now = new Date();
+                 var time = now.getHours();
+                
+                 if(Math.sign(diff) == -1)
+                 {
+                     time  = time + 1;
+                     while(time <= 21)
+                     {
+                         
+                       
+                      timeOptions += '<option value='+time+":00"+'>'+time+ ":00"+'</option>';
+                         
+                         time++;
+                     }
+                     
+                     $(".timeOptions").html(timeOptions);
+                     
+                 }
+              
+                 else
+                 {
+                     var timeOptions = '<option value=""disabled selected hidden>Time</option>';
+                    
+                     
+                     var start = 11;
+                     while(start <= 21)
+                     {
+                       
+                      timeOptions += '<option value='+start+":00"+'>'+start+ ":00"+'</option>';
+                         
+                         start++;
+                     }
+                     $(".timeOptions").html(timeOptions);
+                 }
+                  
+              }
+                
+                
+             })
+             
+                
+        
+        });
+
+    </script>
 </body>
 
 </html>

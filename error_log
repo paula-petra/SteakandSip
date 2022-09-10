@@ -1,0 +1,6 @@
+[07-Sep-2022 08:32:20 America/New_York] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/friecdwt/steakandsip.friendship-bakery.com/connect.php on line 8
+[07-Sep-2022 19:38:59 Europe/Malta] PHP Notice:  Undefined variable: unite_hm in /home/friecdwt/steakandsip.friendship-bakery.com/reservations.php on line 88
+[07-Sep-2022 19:38:59 Europe/Malta] PHP Notice:  Undefined variable: unite_hm in /home/friecdwt/steakandsip.friendship-bakery.com/reservations.php on line 88
+[07-Sep-2022 19:38:59 Europe/Malta] PHP Notice:  Undefined variable: unite_hm in /home/friecdwt/steakandsip.friendship-bakery.com/reservations.php on line 88
+[07-Sep-2022 19:38:59 Europe/Malta] PHP Notice:  Undefined variable: unite_hm in /home/friecdwt/steakandsip.friendship-bakery.com/reservations.php on line 88
+[07-Sep-2022 19:38:59 Europe/Malta] PHP Notice:  Undefined variable: unite_hm in /home/friecdwt/steakandsip.friendship-bakery.com/reservations.php on line 88

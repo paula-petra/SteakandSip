@@ -1,3 +1,6 @@
+<?php
+$mydate = date('Y-m-d');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,35 +21,17 @@
         <!-- <h2>Steak and Sip Booking</h2> -->
         <form method="" action="" id="secondForm" class="confirm"  >
             <h3>CONFIRM SELECTION</h3>
+            <!--<div class="select2 date2">-->
+            <!--    <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>-->
+            <!--    <input type="date" min="2022-08-29" class="select2 date2" id="date2" name="date" required >-->
+            <!--</div>-->
             <div class="select2 date2">
-                <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
-                <input type="date" min="2022-08-29" class="select2 date2" id="date2" name="date" required >
-            </div>
-            <select class="select2 time2" id="time2" name="time2" required>
+                    <img src="https://img.icons8.com/color/48/000000/calendar--v1.png"/>
+                    <input class="select2 pick date_picker" placeholder="pick a date" id="date2" type="text"  name="date" required>
+                </div>
+            <select class="select2 time2 timeOptions2" id="time2" name="time2" required>
                
-                <?php
-                    $ser_dur = 30;
-                    
-                    $now = date('Y-m-d H:m:s');
-                    $now2 = '2022-08-31 12:16:00';
-                    $hr = date('H',strtotime($now2));
-                    echo $hr;
-                    //$hr = $now -> format('H');//date_parse($now)['hour'];
-                    $start = ((int)$hr+1)*60; //660;
-                    
-                    while ($start <= 1260) {
                 
-                    $new_hour = floor($start/60);
-                    $new_minute = $start%60;
-                    if ($new_minute === 0) { $new_minute = "00 "; } else { $new_minute = $new_minute." "; }
-                    $unite_hm = $new_hour . ":" . $new_minute;
-                    
-                    ?>
-                    <option value="<?php echo $unite_hm; ?>" ><?php echo $unite_hm; ?></option>
-                    <?php
-                    $start += $ser_dur;
-                    }
-                ?>
 
             </select>
             <select class="select2 guests2" id="guests2" name="guests2" required>
@@ -67,15 +52,16 @@
             <div class="btn-box">
                 <button type="button" class="" id="next">NEXT</button>
             </div>
+            <input type="hidden" id="today2" value="<?=$mydate?>">
         </form>
         
-        <form action="bookingtable.php" id="thirdForm" class="confirm">
+        <form id="thirdForm" class="confirm">
             <h3>Your Details</h3>
-            <input type="text" id="fName" class="select2" name="firstName" required placeholder="First Name*" autocomplete="off">
-            <input type="text" id="lName" class="select2" name="lastName" required placeholder="Last Name*" autocomplete="off">
-            <input type="tel" id="mobile" class="select2" name="phoneNumber" required placeholder="Phone Number*" autocomplete="off">
-            <input type="text" id="eMail" class="select2" name="email" required placeholder="E-mail Address*" autocomplete="off">
-            <select name="occasion" id="occasion" class="select2">
+            <input data-name="fName" type="text" id="fName" class="select2 input" name="firstName" required placeholder="First Name*" autocomplete="off">
+            <input data-name="lName" type="text" id="lName" class="select2 input" name="lastName" required placeholder="Last Name*" autocomplete="off">
+            <input data-name="phone" type="tel" id="mobile" class="select2 input" name="phoneNumber" required placeholder="Phone Number*" autocomplete="off">
+            <input data-name="email" type="text" id="eMail" class="select2 input" name="email" required placeholder="E-mail Address*" autocomplete="off">
+            <select data-name="occasion" name="occasion" id="occasion" class="select2 input">
                 <option value="" disabled selected hidden>Select an Occasion (optional)</option>
                 <option value="none">None</option>
                 <option value="birthday">Birthday</option>
@@ -84,17 +70,19 @@
                 <option value="special occasion">Special Occasion</option>
                 <option value="business meal">Business Meal</option>
             </select>
-            <input type="text" id="special" class="select2" name="request" placeholder="Special Requests (optional)" autocomplete="off">
+            <input data-name="special" type="text" id="special" class="select2 input" name="request" placeholder="Special Requests (optional)" autocomplete="off">
             <p>*We endeavour to meet all requests, regrettable some cannot be guaranteed.*</p>
+            
+            <input class="input" data-name="time" type="hidden" id="time3" name="time3">
+            <input class="input" data-name="date" type="hidden" id="date3" name="date3">
+            <input class="input" data-name="no_ofGuests" type="hidden" id="guests3" name="guests3">
             
             <div class="btn-box">
                 <button type="button" class="" id="back">BACK</button>
-                <button type="submit" class="" id="confirmBtn" name="confirmBtn">CONFIRM</button>
+                <button type="button" class="submit" id="confirmBtn" name="confirmBtn" add data-ajax="controllers/reservations.php" btn="CONFIRM">CONFIRM</button>
             </div>
-            <input type="hidden" id="time3" name="time3" value="<?php echo'<script>localStorage.getItem(\"timevalue\") </script>' ?>">
-            <input type="hidden" id="date3" name="date3" value="<?php echo'<script>localStorage.getItem(\"timevalue\") </script>' ?>">
-            <input type="hidden" id="guests3" name="guests3" value="<?php echo'<script>localStorage.getItem(\"timevalue\") </script>' ?>">
-        </form>
+            
+          </form>
 
         <div class="step-row">
             <div id="progress"></div>
@@ -113,12 +101,98 @@
         </div>
     </footer>
 
-    <!-- <script src="script.js"></> -->
+     <script src="script.js"></script>
+     
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="api/js/send.js"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <script>
-        console.log('timevalues', localStorage.getItem('timevalue'));
+     $(document).ready(function()
+     {
+         var tod = localStorage.getItem('datevalue');
+         $("#date2").val(tod);
+         
+             var today = $("#today2").val();
+             var numToday = new Date(today)
+             var day;
+             
+             var timeR = localStorage.getItem('timevalue');
+             var timeOptions2 = '<option value="'+timeR+'"selected>'+timeR+'</option>';
+             
+             $(".timeOptions2").html(timeOptions2);
+           
+        
+             $('.date_picker').datepicker({
+              dateFormat: "yy-mm-d",
+              minDate: new Date(today),
+              onSelect: function(dateText)
+              {
+                  localStorage.setItem("datevalue", this.value);
+                  $(this).change();
+                  var t = dateText.split('-');
+                  day = t[2];
+                  
+                  var pickedDate = new Date(dateText);
+                  var diff = parseInt(pickedDate.getTime() - numToday.getTime());
+                
+                 var now = new Date();
+                 var time = now.getHours();
+                
+                 if(Math.sign(diff) == -1)
+                 {
+                     time  = time + 1;
+                     while(time <= 21)
+                     {
+                         
+                       
+                      timeOptions += '<option value='+time+":00"+'>'+time+ ":00"+'</option>';
+                         
+                         time++;
+                     }
+                     
+                     $(".timeOptions2").html(timeOptions);
+                     
+                 }
+              
+                 else
+                 {
+                     var timeOptions = '<option value=""disabled selected hidden>'+timeR+'</option>';
+                    
+                     
+                     var start = 11;
+                     while(start <= 21)
+                     {
+                       
+                      timeOptions += '<option value='+start+":00"+'>'+start+ ":00"+'</option>';
+                         
+                         start++;
+                     }
+                     $(".timeOptions2").html(timeOptions);
+                 }
+                  
+              }
+                
+                
+             })
+             
+       
         document.getElementById('time2').value = localStorage.getItem('timevalue');
         document.getElementById('guests2').value = localStorage.getItem('guests');
-        document.getElementById('date2').value = localStorage.getItem('datevalue');
+        // document.getElementById('date2').value = localStorage.getItem('datevalue');
+        
+        document.getElementById('time3').value = localStorage.getItem('timevalue');
+        document.getElementById('guests3').value = localStorage.getItem('guests');
+        document.getElementById('date3').value = localStorage.getItem('datevalue');
+        
+    
+        
+        // console.log('selected date: '+ localStorage.getItem('datevalue'));
+
 
         var date = new Date();
         var tdate = date.getDate();
@@ -138,7 +212,6 @@
         var minDate = year + '-' + month + '-' + tdate;
         document.getElementById('date2').setAttribute('min', minDate);
 
-        console.log(minDate);
 
         var form1 = document.getElementById('secondForm');
         var form2 = document.getElementById('thirdForm');
@@ -216,7 +289,7 @@
                 }
             }
 
-            location.replace('bookingtable.php?firstName=fName');
+            // location.replace('bookingtable.php?firstName=fName');
         }
 
         var selectedDate = document.querySelector('input[id="date2"]').addEventListener('change', function(){
@@ -232,7 +305,7 @@
 
         var guestNumber = document.getElementById('guests2');
         guestNumber.addEventListener('change', function handleChange(e){
-            localStorage.setItem("guests2", e.target.value);
+            localStorage.setItem("guests", e.target.value);
             console.log(e.target.value);
         });
 
@@ -290,6 +363,9 @@
         // }          
         // });
         // });
+        })
     </script>
+ 
+
 </body>
 </html>

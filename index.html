@@ -75,12 +75,12 @@
             </div>
             <h1 style="color:#ffffff;" > <?php  echo "momo"; ?></h1>
                 
-            <form id="form" action="newsletter.php" method="POST">
+            <form id="form">
                 <div class="div1">
-                    <input type="text" class="formBox newsletterContact" id="fullName" name="fullName" placeholder="Full Name" required>
-                    <input type="text" class=" formBox newsletterContact" id="email" name="email" placeholder="E-mail Address" required>
+                    <input type="text" class="formBox newsletterContact input" id="fullName" data-name="name" name="fullName" placeholder="Full Name" required>
+                    <input type="text" class="formBox newsletterContact input" id="email" name="email" data-name="email" placeholder="E-mail Address" required>
                 </div>
-                <button class="formBox sendButton">SIGN UP</button>
+                <button class="formBox sendButton submit" add data-ajax="controllers/newsLetter.php" btn="SIGN UP">SIGN UP</button>
             </form>
         </section>
     </main>
@@ -94,4 +94,6 @@
     </footer>
 </body>
 <script src="script.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="api/js/send.js"></script>
 </html>

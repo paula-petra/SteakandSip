@@ -23,15 +23,21 @@ if(month < 10){
 }
 
 // var year = date.getUTCFullYear();
-var minDate = year + '-' + month + '-' + tdate;
-document.getElementById('date').setAttribute('min', minDate);
+// var minDate = year + '-' + month + '-' + tdate;
+// document.getElementById('date').setAttribute('min', minDate);
 
-console.log(minDate);
 
-var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){
-    console.log('datevalue', this.value);
-    localStorage.setItem("datevalue", this.value);
-});
+// var selectedDate = document.querySelector('input[id="date"]').addEventListener('change', function(){
+//     console.log('datevalue', this.value);
+//     localStorage.setItem("datevalue", this.value);
+// });
+
+// var selectedDate = document.getElementById('dateFun');
+// selectedDate.addEventListener('change', function handleChange(e){
+//     console.log('datevalue', this.value);
+//     localStorage.setItem("datevalue", this.value);
+//     alert("here");
+// });
 
 var selectedTime = document.getElementById('time');
 selectedTime.addEventListener('change', function handleChange(e){
